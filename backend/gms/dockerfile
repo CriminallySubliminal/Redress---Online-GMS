@@ -1,0 +1,17 @@
+# Use the official PostgreSQL image from the Docker Hub
+FROM postgres:16-alpine
+
+# (Optional) Set environment variables directly
+# It is better practice to use a .env file or docker-compose,
+# but you can hardcode them for a quick setup:
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=postgres
+ENV POSTGRES_DB=gms_db
+
+# Copy initialization scripts
+# Any .sql or .sh scripts in this folder are executed 
+# in alphabetical order when the container first starts.
+# COPY ./init-scripts/ /docker-entrypoint-initdb.d/
+
+# Expose the default Postgres port
+EXPOSE 5432
