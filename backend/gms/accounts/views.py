@@ -8,7 +8,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 
-from .serializers import UserSerializer, RegisterSerializer, PublicUserSerializer
+from .serializers import UserSerializer, RegisterSerializer, PublicUserSerializer, ChangePasswordSerializer
 from .permissions import IsSelfOrAdmin
 from .utils import send_verification_email, verify_token
 
@@ -107,6 +107,18 @@ class UserViewSet(viewsets.ModelViewSet):
     def me(self, request):
         serializer = self.get_serializer(request.user)
         return Response(serializer.data)
+
+    @action(detail=False, methods=['post'], permission_classes=[permissions.IsAuthenticated])
+    def change_password(self, request):
+        serializer = ChangePasswordSerializer(data=request.data)
+        if serializer.is_valid():
+            user = request.user
+            if not user.check_password(serializer.validated_data.get('old_password')):
+                return Response({"old_password": ["Wrong password."]}, status=status.HTTP_400_BAD_REQUEST)
+            user.set_password(serializer.validated_data.get('new_password'))
+            user.save()
+            return Response({"detail": "Password updated successfully"}, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):

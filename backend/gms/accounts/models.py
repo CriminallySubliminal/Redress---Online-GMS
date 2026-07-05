@@ -27,10 +27,18 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, username, password=None, **extra_fields):
+    def create_superuser(self, email, password=None, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_active', True)
+        
+        import uuid
+        if 'username' not in extra_fields:
+            extra_fields['username'] = f"admin_{uuid.uuid4().hex[:8]}"
+        if 'institutional_id' not in extra_fields:
+            extra_fields['institutional_id'] = f"ADMIN-{uuid.uuid4().hex[:6].upper()}"
+            
+        username = extra_fields.pop('username')
         return self.create_user(email, username, password, **extra_fields)
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
@@ -49,7 +57,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    REQUIRED_FIELDS = []
 
     def __str__(self):
         return self.email

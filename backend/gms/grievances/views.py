@@ -45,6 +45,10 @@ class GrievanceViewSet(viewsets.ModelViewSet):
             # Users see their own grievances OR any grievance marked as public
             qs = Grievance.objects.filter(Q(created_by=user) | Q(is_public=True))
             
+            view_filter = self.request.query_params.get('view_filter')
+            if view_filter == 'mine':
+                qs = qs.filter(created_by=user)
+            
         # Annotate priority weight for ordering
         qs = qs.annotate(
             priority_weight=Case(
