@@ -124,7 +124,7 @@ export default function SubmitGrievancePage() {
   return (
     <div className="submit-page">
       <h1 style={{ fontSize: 'var(--font-size-2xl)' }}>Submit a Grievance</h1>
-      <p style={{ marginBottom: '24px' }}>Tell us about your concern — we're here to help resolve it.</p>
+      <p style={{ marginBottom: '24px' }}>Tell us about your concern. We're here to help resolve it.</p>
 
       {error && <div className="auth-error" style={{ color: 'red', marginBottom: '1rem', textAlign: 'center' }}>{error}</div>}
       

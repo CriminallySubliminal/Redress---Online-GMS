@@ -13,8 +13,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 600px 400px at 30% 20%, rgba(245, 146, 11, 0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 500px 300px at 70% 80%, rgba(234, 88, 12, 0.06) 0%, transparent 70%);
+    radial-gradient(ellipse 600px 400px at 30% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 300px at 70% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -60,10 +60,7 @@
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #fff 0%, var(--color-primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
   margin-bottom: 8px;
 }
 
@@ -74,9 +71,9 @@
   padding: 4px 14px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-primary-light);
-  background: rgba(245, 146, 11, 0.12);
-  border: 1px solid rgba(245, 146, 11, 0.2);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 9999px;
   letter-spacing: 0.03em;
 }
@@ -141,8 +138,8 @@
 }
 
 .admin-login-input-wrap:focus-within {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(245, 146, 11, 0.12);
+  border-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.07);
 }
 
@@ -183,21 +180,19 @@
 .admin-login-submit {
   margin-top: 6px;
   padding: 13px 24px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-  color: #fff;
+  background: #fff;
+  color: #000;
   border: none;
   border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.25s;
-  box-shadow: 0 4px 20px -4px rgba(245, 146, 11, 0.35);
   font-family: var(--font-family);
 }
 
 .admin-login-submit:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 28px -4px rgba(245, 146, 11, 0.5);
+  background: #e2e8f0;
 }
 
 .admin-login-submit:active {

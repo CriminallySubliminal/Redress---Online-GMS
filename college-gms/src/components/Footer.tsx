@@ -11,7 +11,7 @@ export default function Footer() {
             <img src={logoImg} alt="Redress logo" className="footer-logo-img" />
             <h3>Redress</h3>
           </div>
-          <p>Accountability Through Action — empowering student voices with transparency.</p>
+          <p>Accountability Through Action. Empowering student voices with transparency.</p>
         </div>
 
         <div className="footer-links">

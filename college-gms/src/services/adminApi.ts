@@ -26,7 +26,7 @@ adminApi.interceptors.response.use(
   (response) => response,
   async (error) => {
     if (error.response?.status === 401) {
-      // Admin token expired — clear and redirect
+      // Admin token expired: clear and redirect
       localStorage.removeItem('adminAccessToken');
       localStorage.removeItem('adminRefreshToken');
       localStorage.removeItem('adminUser');

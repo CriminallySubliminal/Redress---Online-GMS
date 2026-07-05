@@ -56,9 +56,9 @@
 }
 
 .admin-toolbar .search-box input:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(245, 146, 11, 0.12);
-  background: #fff;
+  border-color: var(--color-text);
+  box-shadow: 0 0 0 4px var(--color-surface-alt);
+  background: var(--color-bg);
 }
 
 .form-select {
@@ -115,24 +115,8 @@
   background: var(--glass-bg-strong);
 }
 
-.grievance-table tbody tr::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--gradient-primary);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-}
-
 .grievance-table tbody tr:hover {
-  background: var(--color-primary-50);
-}
-
-.grievance-table tbody tr:hover::before {
-  opacity: 1;
+  background: var(--color-surface-alt);
 }
 
 .grievance-table tbody tr:last-child td {
@@ -141,7 +125,7 @@
 
 .table-id {
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text);
   letter-spacing: 0.02em;
 }
 
@@ -174,11 +158,10 @@
 }
 
 .table-actions button:hover {
-  background: var(--color-primary-50);
-  color: var(--color-primary);
-  border-color: var(--color-primary-200);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px -3px rgba(245, 146, 11, 0.2);
 }
 
 /* Pagination */
@@ -221,10 +204,10 @@
 }
 
 .pagination-controls button.active {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-  border-color: transparent;
-  color: #fff;
-  box-shadow: 0 4px 12px -3px rgba(245, 146, 11, 0.3);
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+  box-shadow: none;
 }
 
 .priority-dot {

@@ -17,7 +17,8 @@ import {
   Hotel,
   Utensils,
   ShieldAlert,
-  MoreHorizontal
+  MoreHorizontal,
+  X
 } from 'lucide-react'
 import { grievanceService } from '../services/grievanceService'
 import { useAuth } from '../context/AuthContext'
@@ -89,7 +90,7 @@ export default function StaffDashboardPage() {
     setError(null)
     setSuccess(null)
     try {
-      await grievanceService.updateGrievance(grievanceId, { status: newStatus })
+      await grievanceService.updateGrievance(grievanceId, { status: newStatus as any })
       setSuccess('Status updated successfully')
       fetchGrievances()
       setTimeout(() => setSuccess(null), 3000)
@@ -144,10 +145,10 @@ export default function StaffDashboardPage() {
 
   const getPriorityClass = (priority: string) => `priority-pill priority-${priority}`
 
-  const formatDate = (dateString: string) =>
-    new Date(dateString).toLocaleDateString('en-US', {
-      month: 'short', day: 'numeric', year: 'numeric',
-    })
+  // const formatDate = (dateString: string) =>
+  //   new Date(dateString).toLocaleDateString('en-US', {
+  //     month: 'short', day: 'numeric', year: 'numeric',
+  //   })
 
   const getDaysSince = (dateString: string) => {
     const days = Math.floor((Date.now() - new Date(dateString).getTime()) / (1000 * 60 * 60 * 24))

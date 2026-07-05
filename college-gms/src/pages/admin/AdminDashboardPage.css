@@ -29,26 +29,8 @@
   overflow: hidden;
 }
 
-.admin-stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gradient-primary);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-}
-
 .admin-stat-card:hover {
-  box-shadow: var(--shadow-xl);
-  transform: translateY(-4px);
-  border-color: rgba(245, 146, 11, 0.15);
-}
-
-.admin-stat-card:hover::before {
-  opacity: 1;
+  border-color: var(--color-border-light);
 }
 
 .admin-stat-card .stat-label {
@@ -82,7 +64,7 @@
   transform: scale(1.1);
 }
 
-.stat-icon.total { background: linear-gradient(135deg, var(--color-primary-50), var(--color-primary-100)); color: var(--color-primary); box-shadow: 0 4px 12px -2px rgba(245, 146, 11, 0.2); }
+.stat-icon.total { background: var(--color-surface-alt); color: var(--color-text); border: 1px solid var(--color-border); }
 .stat-icon.pending { background: linear-gradient(135deg, var(--color-warning-bg), #fef3c7); color: #b45309; box-shadow: 0 4px 12px -2px rgba(245, 158, 11, 0.2); }
 .stat-icon.inprogress { background: linear-gradient(135deg, var(--color-info-bg), #dbeafe); color: #1d4ed8; box-shadow: 0 4px 12px -2px rgba(59, 130, 246, 0.2); }
 .stat-icon.resolved { background: linear-gradient(135deg, var(--color-success-bg), #d1fae5); color: #059669; box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.2); }
@@ -271,7 +253,7 @@
 .trend-bar {
   flex: 1;
   border-radius: 6px 6px 0 0;
-  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: var(--color-text-muted);
   transition: all var(--transition-base);
   min-height: 12px;
   opacity: 0.8;
@@ -288,9 +270,7 @@
 
 .trend-bar:hover {
   opacity: 1;
-  transform: scaleY(1.02);
-  transform-origin: bottom;
-  box-shadow: 0 0 16px rgba(245, 146, 11, 0.4);
+  background: var(--color-text);
 }
 
 .trend-labels {
@@ -347,7 +327,7 @@
 }
 
 .activity-item:hover {
-  background: var(--color-primary-50);
+  background: var(--color-surface-alt);
   padding-left: 12px;
   padding-right: 12px;
   margin-left: -12px;
@@ -360,10 +340,9 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  background: var(--color-text-muted);
   flex-shrink: 0;
   margin-top: 6px;
-  box-shadow: 0 2px 8px rgba(245, 146, 11, 0.4);
 }
 
 .activity-content p {

@@ -1,0 +1,63 @@
+/* AdminLayout.css */
+
+.admin-theme {
+  /* Enforce sharp black and white theme overrides */
+  --color-primary: #000000;
+  --color-primary-dark: #000000;
+  --color-primary-light: #333333;
+  --color-primary-50: #f8f9fa;
+  --color-primary-100: #e9ecef;
+  --color-primary-200: #dee2e6;
+  --color-primary-500: #6c757d;
+  --color-primary-600: #495057;
+  --color-primary-700: #343a40;
+  --color-primary-800: #212529;
+  --color-primary-900: #000000;
+
+  --color-accent: #000000;
+  --color-accent-light: #444444;
+  --color-accent-dark: #000000;
+  
+  --gradient-primary: linear-gradient(135deg, #333, #000);
+
+  /* Neutrals: strict grays/monochromes, no warm slate */
+  --color-bg: #fdfdfd;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f3f5;
+  --color-border: #dee2e6;
+  --color-border-light: #f8f9fa;
+  --color-text: #000000;
+  --color-text-secondary: #495057;
+  --color-text-muted: #868e96;
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+}
+
+.dark .admin-theme,
+[data-theme="dark"] .admin-theme {
+  --color-primary: #ffffff;
+  --color-primary-dark: #ffffff;
+  --color-primary-light: #cccccc;
+  --color-primary-50: #1a1a1a;
+  --color-primary-100: #262626;
+  --color-primary-200: #333333;
+  --color-primary-500: #a3a3a3;
+  --color-primary-600: #8c8c8c;
+  --color-primary-700: #737373;
+  
+  --color-accent: #ffffff;
+  --color-accent-light: #cccccc;
+  
+  --gradient-primary: linear-gradient(135deg, #ccc, #fff);
+
+  --color-bg: #000000;
+  --color-surface: #0a0a0a;
+  --color-surface-alt: #141414;
+  --color-border: #262626;
+  --color-border-light: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted: #737373;
+}

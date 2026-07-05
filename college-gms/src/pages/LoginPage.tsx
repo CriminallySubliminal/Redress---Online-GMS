@@ -48,14 +48,13 @@ export default function LoginPage() {
       <div className="auth-bg-grid" />
 
       <div className="auth-container">
-        {/* Left panel — branding */}
+        {/* Left panel */}
         <div className="auth-panel-left">
           <div className="auth-panel-left-content">
             <img src={logoImg} alt="Redress logo" className="auth-brand-logo" />
             <h1 className="auth-brand-title">Redress</h1>
             <p className="auth-brand-desc">
-              Accountability Through Action — empowering student voices through
-              transparency and real results.
+              Report issues. Track progress. Get results.
             </p>
             <div className="auth-brand-stats">
               <div className="auth-brand-stat">
@@ -70,7 +69,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* Right panel — form */}
+        {/* Right panel */}
         <div className="auth-panel-right">
           <div className="auth-card">
             <div className="auth-card-header">

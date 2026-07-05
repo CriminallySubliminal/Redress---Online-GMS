@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import { useTheme } from '../hooks/useTheme'
 import logoImg from '../assets/logo.png'
 import './AdminSidebar.css'
 
@@ -8,7 +7,6 @@ interface AdminSidebarProps {
 }
 
 export default function AdminSidebar({ onLogout }: AdminSidebarProps) {
-  const { theme, toggleTheme } = useTheme()
 
   // Read admin user from localStorage (set during admin login)
   const adminUserRaw = localStorage.getItem('adminUser')
@@ -39,19 +37,11 @@ export default function AdminSidebar({ onLogout }: AdminSidebarProps) {
           <span className="material-icons-outlined">badge</span>
           Staff
         </NavLink>
-        <NavLink to="/admin" end={false} className={() => ''}>
+        <NavLink to="/admin/profile">
           <span className="material-icons-outlined">settings</span>
           Settings
         </NavLink>
-        <button 
-          onClick={toggleTheme}
-          className="sidebar-btn"
-        >
-          <span className="material-icons-outlined" style={{ opacity: 0.75 }}>
-            {theme === 'dark' ? 'light_mode' : 'dark_mode'}
-          </span>
-          Toggle Theme
-        </button>
+
       </nav>
 
       <div className="sidebar-user">

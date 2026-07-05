@@ -49,7 +49,7 @@ export default function MyGrievancesPage() {
   const fetchGrievances = useCallback(async () => {
     setLoading(true)
     try {
-      const params: Record<string, any> = { ordering }
+      const params: Record<string, any> = { ordering, view_filter: 'mine' }
       if (statusFilter) params.status = statusFilter
       if (searchQuery) params.search = searchQuery
       if (startDate) params.start_date = startDate

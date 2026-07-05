@@ -2,6 +2,7 @@ import { Outlet, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import AdminSidebar from '../components/AdminSidebar'
 import adminApi from '../services/adminApi'
+import './AdminLayout.css'
 
 export default function AdminLayout() {
   const [authorized, setAuthorized] = useState<boolean | null>(null) // null = loading
@@ -54,7 +55,7 @@ export default function AdminLayout() {
   }
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
+    <div className="admin-theme" style={{ display: 'flex', minHeight: '100vh', background: 'var(--color-bg)' }}>
       <AdminSidebar onLogout={handleAdminLogout} />
       <main style={{
         flex: 1,

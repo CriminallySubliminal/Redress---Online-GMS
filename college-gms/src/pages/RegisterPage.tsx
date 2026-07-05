@@ -108,14 +108,13 @@ export default function RegisterPage() {
       <div className="auth-bg-grid" />
 
       <div className="auth-container auth-container--wide">
-        {/* Left panel — branding */}
+        {/* Left panel */}
         <div className="auth-panel-left">
           <div className="auth-panel-left-content">
             <img src={logoImg} alt="Redress logo" className="auth-brand-logo" />
             <h1 className="auth-brand-title">Redress</h1>
             <p className="auth-brand-desc">
-              Create your account and start making your campus a better
-              place — accountability through action.
+              Create your account and help make the campus a better place.
             </p>
             <div className="auth-brand-stats">
               <div className="auth-brand-stat">
@@ -130,7 +129,7 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        {/* Right panel — form */}
+        {/* Right panel */}
         <div className="auth-panel-right">
           <div className="auth-card">
             <div className="auth-card-header">
@@ -289,7 +288,7 @@ export default function RegisterPage() {
                     className="auth-file-hidden"
                   />
                 </label>
-                <span className="auth-hint">Optional — a clear photo of your ID card.</span>
+                <span className="auth-hint">Optional: a clear photo of your ID card.</span>
               </div>
 
               {/* Password row */}

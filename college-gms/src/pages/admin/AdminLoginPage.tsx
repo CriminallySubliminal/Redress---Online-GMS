@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Mail, Lock, Eye, EyeOff, ShieldCheck } from 'lucide-react'
 import logoImg from '../../assets/logo.png'
 import api from '../../services/api'
+import '../../layouts/AdminLayout.css'
 import './AdminLoginPage.css'
 
 export default function AdminLoginPage() {
@@ -38,7 +39,7 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="admin-login-page">
+    <div className="admin-login-page admin-theme">
       {/* Background effects */}
       <div className="admin-login-bg" />
 

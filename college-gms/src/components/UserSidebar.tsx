@@ -57,6 +57,12 @@ export default function UserSidebar() {
               </li>
             </>
           )}
+          <li>
+            <NavLink to="/profile">
+              <span className="material-icons-outlined">manage_accounts</span>
+              My Profile
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </aside>

@@ -1,6 +1,7 @@
 .footer {
-  background: linear-gradient(135deg, #0f172a 0%, #78350f 60%, #92400e 100%);
-  color: rgba(255, 255, 255, 0.7);
+  background: var(--color-surface-alt);
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border);
   padding: 56px 24px 28px;
   margin-top: auto;
   position: relative;
@@ -43,7 +44,7 @@
 }
 
 .footer-brand h3 {
-  color: #fff;
+  color: var(--color-text);
   font-family: var(--font-display);
   font-size: var(--font-size-xl);
   font-weight: 800;
@@ -55,11 +56,11 @@
   font-size: var(--font-size-sm);
   line-height: 1.7;
   max-width: 280px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }
 
 .footer-links h4 {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text);
   font-size: var(--font-size-xs);
   font-weight: 700;
   text-transform: uppercase;
@@ -75,7 +76,7 @@
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
   transition: color var(--transition-fast), transform var(--transition-fast);
   display: inline-block;
@@ -90,12 +91,12 @@
   max-width: var(--max-width);
   margin: 36px auto 0;
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--color-text-muted);
   position: relative;
 }
 
@@ -111,10 +112,10 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.5);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
   transition: all var(--transition-base);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
 }
 
 .footer-social a:hover {

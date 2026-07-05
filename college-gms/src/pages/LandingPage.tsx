@@ -23,10 +23,7 @@ export default function LandingPage() {
     <>
       {/* ── Hero ── */}
       <section className="lp-hero" id="hero">
-        {/* Background decorations */}
-        <div className="lp-hero-glow lp-hero-glow--1" />
-        <div className="lp-hero-glow lp-hero-glow--2" />
-        <div className="lp-hero-grid" />
+        <div className="lp-hero-inner">
 
         <div className="lp-hero-content">
           <Badge variant="outline" className="lp-hero-badge">
@@ -35,14 +32,13 @@ export default function LandingPage() {
           </Badge>
 
           <h1 className="lp-hero-title">
-            Your Campus Voice,
+            Report issues.
             <br />
-            <span className="lp-hero-title--accent">Amplified.</span>
+            <span className="lp-hero-title--accent">Get them fixed.</span>
           </h1>
 
           <p className="lp-hero-subtitle">
-            A transparent grievance platform that turns student concerns into
-            real action — with clear accountability at every step.
+            A transparent platform for students to report campus issues and track exactly how and when they get resolved.
           </p>
 
           <div className="lp-hero-actions">
@@ -75,6 +71,55 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+
+        {/* ── Hero Visual (Right Side) ── */}
+        <div className="lp-hero-visual">
+          <div className="lp-mockup-card">
+            <div className="lp-mockup-header">
+              <span className="lp-mockup-dot bg-red-400" />
+              <span className="lp-mockup-dot bg-amber-400" />
+              <span className="lp-mockup-dot bg-emerald-400" />
+            </div>
+            <div className="lp-mockup-body">
+              <div className="lp-mockup-ticket">
+                <div className="lp-mockup-ticket-header">
+                  <div className="lp-mockup-avatar">JD</div>
+                  <div className="lp-mockup-meta">
+                    <h4>Library Wi-Fi Disconnects</h4>
+                    <p>Submitted 2 hours ago</p>
+                  </div>
+                  <Badge variant="outline" className="lp-mockup-status badge-progress">
+                    In Progress
+                  </Badge>
+                </div>
+                <div className="lp-mockup-ticket-body">
+                  <p>The network on the 3rd floor keeps dropping every 15 minutes. It's disrupting study sessions.</p>
+                </div>
+                <div className="lp-mockup-ticket-footer">
+                  <div className="lp-mockup-update">
+                    <CheckCircle2 className="w-4 h-4 text-[#10b981]" />
+                    <span>IT Department assigned to issue</span>
+                  </div>
+                  <span className="lp-mockup-time">Just now</span>
+                </div>
+              </div>
+              
+              <div className="lp-mockup-ticket lp-mockup-ticket--dim">
+                <div className="lp-mockup-ticket-header">
+                  <div className="lp-mockup-avatar bg-blue-500/20 text-blue-500">AS</div>
+                  <div className="lp-mockup-meta">
+                    <h4>Broken heater in Room 204</h4>
+                    <p>Submitted yesterday</p>
+                  </div>
+                  <Badge variant="outline" className="lp-mockup-status badge-resolved">
+                    Resolved
+                  </Badge>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       </section>
 
       {/* ── How It Works ── */}
@@ -84,10 +129,9 @@ export default function LandingPage() {
             <Badge variant="secondary" className="lp-section-badge">
               How It Works
             </Badge>
-            <h2 className="lp-section-title">Three simple steps to resolution</h2>
+            <h2 className="lp-section-title">How issues get resolved</h2>
             <p className="lp-section-desc">
-              No bureaucracy, no runaround — just a clear path from concern to
-              closure.
+              We removed the bureaucracy so you can see exactly where your report stands.
             </p>
           </div>
 
@@ -151,9 +195,9 @@ export default function LandingPage() {
             <Badge variant="secondary" className="lp-section-badge">
               Why Redress
             </Badge>
-            <h2 className="lp-section-title">Built for trust &amp; transparency</h2>
+            <h2 className="lp-section-title">Built for accountability</h2>
             <p className="lp-section-desc">
-              Every feature is designed to make accountability effortless.
+              See who is handling your request and exactly when it updates.
             </p>
           </div>
 
@@ -236,14 +280,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* CTA */}
       <section className="lp-cta" id="cta">
         <div className="lp-cta-inner">
-          <h2 className="lp-cta-title">Ready to be heard?</h2>
-          <p className="lp-cta-desc">
-            Join your peers and start making campus life better — one issue at a
-            time.
-          </p>
+          <h2 className="lp-cta-title">See something broken?</h2>
+            <p className="lp-cta-desc">
+              Help us keep the campus running smoothly by reporting issues as soon as you spot them.
+            </p>
           <div className="lp-cta-actions">
             <Button asChild size="lg" className="lp-btn-primary lp-btn--lg">
               <Link to="/register">

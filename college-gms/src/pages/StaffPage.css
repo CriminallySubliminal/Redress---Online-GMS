@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   Staff Page — Minimalist Directory
+   Staff Page: Minimalist Directory
    ═══════════════════════════════════════════════ */
 
 .sp-page {
@@ -216,7 +216,7 @@
   border-color: rgba(245, 146, 11, 0.2);
 }
 
-/* Card Top — Avatar + Identity */
+/* Card Top: Avatar + Identity */
 .sp-card-top {
   display: flex;
   align-items: center;

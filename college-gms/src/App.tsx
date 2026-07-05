@@ -17,6 +17,7 @@ import AdminDashboardPage from './pages/admin/AdminDashboardPage'
 import AdminGrievancesPage from './pages/admin/AdminGrievancesPage'
 import AdminStaffPage from './pages/admin/AdminStaffPage'
 import AdminLoginPage from './pages/admin/AdminLoginPage'
+import ProfilePage from './pages/ProfilePage'
 
 function App() {
   const { user } = useAuth()
@@ -43,16 +44,18 @@ function App() {
         <Route path="/staff" element={<StaffPage />} />
         <Route path="/staff-dashboard" element={<StaffDashboardPage />} />
         <Route path="/report-issue" element={<div style={{padding: '2rem'}}><h2>Report Problem</h2><p>System issue reporting coming soon...</p></div>} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Route>
 
-      {/* Admin login — standalone, no layout guard */}
+      {/* Admin login: standalone, no layout guard */}
       <Route path="/admin/login" element={<AdminLoginPage />} />
 
-      {/* Admin pages — guarded by AdminLayout (checks superuser token) */}
+      {/* Admin pages: guarded by AdminLayout (checks superuser token) */}
       <Route element={<AdminLayout />}>
         <Route path="/admin" element={<AdminDashboardPage />} />
         <Route path="/admin/grievances" element={<AdminGrievancesPage />} />
         <Route path="/admin/staff" element={<AdminStaffPage />} />
+        <Route path="/admin/profile" element={<ProfilePage />} />
       </Route>
     </Routes>
   )
